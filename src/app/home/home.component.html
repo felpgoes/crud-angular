@@ -1,0 +1,26 @@
+<button mat-button [color]='colors[idx]' [disabled]='!btnEnable'>Button Test</button>
+<button mat-button color='primary' [disabled]='!btnEnable' (click)='updateValue()'>Click me!</button>
+
+<button mat-button color='primary' [disabled]='!btnEnable' (click)='disable()'>Disable</button>
+<mat-progress-spinner color="primary" [mode]="spinnerMode" [value]="clickValue">
+</mat-progress-spinner>
+
+<section>
+    <p>
+        <mat-checkbox color='warn' (change)='cbChange($event)'> Disable / Enable</mat-checkbox>
+    </p>
+
+    <p>Parei na aula 18: Event Binding com Propery Binding</p>
+    <p>
+    <mat-form-field>
+        <mat-label>Cars</mat-label>
+        <mat-select matNativeControl required 
+        [disabled]='selectDisabled' (selectionChange)='selectionChange($event)'>
+            <mat-option value="1">Volvo</mat-option>
+            <mat-option value="2">Saab</mat-option>
+            <mat-option value="3">Mercedes</mat-option>
+            <mat-option value="4">Audi</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </p>
+</section>
